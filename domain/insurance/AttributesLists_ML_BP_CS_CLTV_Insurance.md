@@ -161,3 +161,44 @@ To design the models for **buying propensity**, **cross-sell of products**, and 
    - For **property & casualty**, tenure, policy bundling, and claims filed are important indicators of long-term value.
 
 By building these models with domain-specific tables and features, you'll be able to predict customer behaviors effectively for both life insurance and property & casualty lines of business.
+
+---
+---
+
+Here’s a table format that organizes the attributes, relevant raw tables, and feature importance for the three models—**Buying Propensity**, **Cross-Sell of Products**, and **CLTV**—for both **Life Insurance** and **Property & Casualty (P&C)**.
+
+### Model Tables & Features Overview
+
+| **Model** | **Buying Propensity (Life)** | **Buying Propensity (P&C)** | **Cross-Sell (Life)** | **Cross-Sell (P&C)** | **CLTV (Life)** | **CLTV (P&C)** |
+|-----------|------------------------------|-----------------------------|-----------------------|----------------------|-----------------|----------------|
+| **Tables** | Customer Demographic | Customer Demographic | Customer Demographic | Customer Demographic | Customer Demographic | Customer Demographic |
+|  | Customer Geo-Demographic | Customer Geo-Demographic | Customer Purchase Behaviour | Customer Geo-Demographic | Customer Purchase Behaviour | Customer Purchase Behaviour |
+|  | Customer Purchase Behaviour | Customer Purchase Behaviour | Account Purchase Behaviour | Customer Purchase Behaviour | Account Purchase Behaviour | Account Purchase Behaviour |
+|  | Account Purchase Behaviour | Account Purchase Behaviour | Customer Behaviour | Account Purchase Behaviour | Customer Behaviour | Customer Behaviour |
+|  | Customer Behaviour | Customer Behaviour |  | Customer Behaviour |  |  |
+
+---
+
+### Full List of Attributes by Table
+
+| **Table**                   | **Attributes (Life Insurance)**                                                             | **Attributes (Property & Casualty)**                                                      |
+|-----------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| **Customer Demographic**     | Age, Gender, Income Level, Marital Status, Number of Dependents, Employment Status, Education Level | Age, Gender, Occupation, Household Size, Income Bracket, Property Ownership                |
+| **Customer Geo-Demographic** | Region, Zip Code, Residential Status (Owned/Rented)                                         | Location Risk Factor (Weather, Crime), Property Type (House/Apartment), Zip Code           |
+| **Customer Purchase Behaviour** | Past Product Purchases (life insurance), Frequency of Interactions, Product Preferences, Payment Methods, Claim History | Past Purchase History (home/auto insurance), Policy Types Owned, Claims Filed, Discounts Used |
+| **Account Purchase Behaviour** | Account Age, Premium Payment History, Policy Renewal History                               | Policy Renewal History, Payment Behavior (Timeliness), Account Age, Policy Bundling        |
+| **Customer Behaviour**       | Online Interaction Patterns, Social Media Interactions                                      | Mobile App Usage, Contact Frequency, Self-Service Channels Usage                           |
+
+---
+
+### Feature Importance for Models
+
+| **Model**                    | **Feature Importance (Life Insurance)**                                        | **Feature Importance (Property & Casualty)**                                           |
+|------------------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| **Buying Propensity**         | Age, Income Level, Past Product Purchases, Payment History                    | Location Risk Factor, Policy Types, Claims Filed, Account Age                          |
+| **Cross-Sell of Products**    | Existing Products, Life Stage, Interaction Frequency                          | Number of Products Held, Location Risk, Claims Frequency                               |
+| **Customer Lifetime Value**   | Policy Duration, Premium Amounts, Claim Frequency, Income Level               | Tenure, Claims Filed, Average Policy Value, Policy Bundling                            |
+
+---
+
+This table structure will help you organize and design the models more effectively by listing out attributes and highlighting the key features for each type of model (Buying Propensity, Cross-Sell, and CLTV).
