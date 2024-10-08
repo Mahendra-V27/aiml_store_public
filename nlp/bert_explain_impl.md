@@ -1,5 +1,7 @@
 ### Overview of BERT
 
+https://github.com/sunil741/Medical-Chatbot-using-Bert-and-GPT2/blob/main/Part1_BioBert_Finetuning_with_Question_Answer_Extractor_Models.ipynb
+
 **BERT** (Bidirectional Encoder Representations from Transformers) is a deep learning model developed by Google that revolutionized the field of natural language processing (NLP) when it was introduced in 2018. It is based on the Transformer architecture and is designed to understand the context of words in a sentence by looking at the words that come before and after them (hence "bidirectional").
 
 ### Key Features of BERT
