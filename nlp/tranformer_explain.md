@@ -32,6 +32,8 @@ The input to the Transformer consists of a sequence of tokens (words or subwords
 Since the Transformer lacks a recurrence mechanism (like RNNs), it needs a way to capture the order of tokens in the input sequence. This is achieved through positional encoding.
 
 - **Sinusoidal Functions**: The positional encoding uses sine and cosine functions to create unique encodings for each position in the sequence. The formula is:
+
+  
   \[
   PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
   \]
@@ -53,7 +55,9 @@ Each encoder layer consists of two main components:
 
 **Steps of Self-Attention**:
 1. **Calculate Attention Scores**: For each token, calculate scores against all other tokens to determine relevance.
-   - Given a query \( Q \), key \( K \), and value \( V \):
+   - Given a query
+   
+   \( Q \), key \( K \), and value \( V \):
    \[
    \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
    \]
