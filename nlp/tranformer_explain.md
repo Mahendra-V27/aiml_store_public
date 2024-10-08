@@ -68,6 +68,8 @@ Each encoder layer consists of two main components:
 #### b. Feed-Forward Neural Network
 
 - Each encoder layer includes a feed-forward neural network applied to each position independently and identically. This consists of two linear transformations with a ReLU activation in between.
+
+  
 \[
 \text{FFN}(x) = \text{ReLU}(xW_1 + b_1)W_2 + b_2
 \]
