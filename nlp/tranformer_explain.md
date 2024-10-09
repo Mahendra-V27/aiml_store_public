@@ -33,7 +33,8 @@ Since the Transformer lacks a recurrence mechanism (like RNNs), it needs a way t
 
 - **Sinusoidal Functions**: The positional encoding uses sine and cosine functions to create unique encodings for each position in the sequence. The formula is:
 
-  
+  ![image](https://github.com/user-attachments/assets/ea9e6150-473b-4fa2-acf6-e0994c282c3f)
+
   \[
   PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
   \]
