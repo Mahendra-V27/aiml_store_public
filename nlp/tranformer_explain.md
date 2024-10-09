@@ -35,14 +35,6 @@ Since the Transformer lacks a recurrence mechanism (like RNNs), it needs a way t
 
   ![image](https://github.com/user-attachments/assets/ea9e6150-473b-4fa2-acf6-e0994c282c3f)
 
-  \[
-  PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
-  \]
-  \[
-  PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
-  \]
-  where \( pos \) is the position and \( i \) is the dimension index.
-  
 - **Result**: This allows the model to understand the order of tokens while maintaining the ability to learn from context.
 
 ### 3. Encoder Layer
@@ -57,12 +49,7 @@ Each encoder layer consists of two main components:
 **Steps of Self-Attention**:
 1. **Calculate Attention Scores**: For each token, calculate scores against all other tokens to determine relevance.
    - Given a query
-   
-   \( Q \), key \( K \), and value \( V \):
-   \[
-   \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-   \]
-   where \( d_k \) is the dimension of the key vectors.
+   ![image](https://github.com/user-attachments/assets/ab14371a-1071-44dc-a8af-98557cc6dc2a)
 
 2. **Concatenate Heads**: The outputs from each head are concatenated and transformed via a linear layer.
 
@@ -70,10 +57,8 @@ Each encoder layer consists of two main components:
 
 - Each encoder layer includes a feed-forward neural network applied to each position independently and identically. This consists of two linear transformations with a ReLU activation in between.
 
-  
-\[
-\text{FFN}(x) = \text{ReLU}(xW_1 + b_1)W_2 + b_2
-\]
+  ![image](https://github.com/user-attachments/assets/962b8e63-d9f4-4d4c-ab27-940ce03474a7)
+
 
 ### 4. Decoder Layer
 
