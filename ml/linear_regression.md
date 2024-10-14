@@ -106,7 +106,7 @@ print(f"Coefficients: {model.coef_}")
 
 1. **Feature Scaling**: Standardize features (e.g., StandardScaler, MinMaxScaler) to ensure all features contribute equally to the model.
    
-2. **Feature Selection**: Techniques like Lasso regression or recursive feature elimination (RFE) can help remove irrelevant or redundant features.
+2. **Feature Selection**: Techniques like Lasso regression or recursive feature elimination (RFE) or Botura can help remove irrelevant or redundant features.
 
 3. **Feature Engineering**: Create new features based on domain knowledge, interactions between features, or using statistical transformations (e.g., polynomial features).
 
