@@ -129,6 +129,20 @@ Each model requires specific tables and attributes, selected based on their pred
    - **Property & Casualty**: Tenure and policy bundling enhance CLTV as they reflect customer loyalty and multi-policy engagement.
 
 
+## Feature Selection Rationale
+
+The features selected for each model reflect the significant factors that influence buying decisions, cross-selling opportunities, and long-term customer value in insurance. The reasons for using these variables include:
+
+1. **Demographics**: Attributes like age, income, and employment status are central to predicting **buying propensity** since they correlate with financial needs, affordability, and lifestyle factors.
+  
+2. **Geo-Demographics**: Geographic data such as location risk and property type are critical in the **P&C** domain for assessing risks, which impacts **CLTV** and **buying propensity**. In **life insurance**, residential status provides insights into customer stability, influencing long-term value.
+
+3. **Purchase and Account Behavior**: Past purchases, payment history, and claims filed highlight customer loyalty, spending power, and risk factors, which are particularly valuable in **cross-sell** models to identify complementary product opportunities.
+
+4. **Customer Behavior**: Interaction patterns with digital channels and marketing content reveal engagement levels, which directly impact **cross-sell** opportunities and customer loyalty indicators for **CLTV**.
+
+5. **Feature Importance for Models**: Each model has a tailored set of important features identified based on domain expertise. For example, in **buying propensity**, age and past purchases are high-impact features, while **CLTV** models prioritize long-term engagement indicators like policy duration and premium amounts.
+
 ## Feature Importance Justification
 
 1. **Buying Propensity**:
