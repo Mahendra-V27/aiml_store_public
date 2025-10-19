@@ -31,6 +31,16 @@ The objective of linear regression is to minimize the difference between the pre
 - **solver** (optimization algorithm):
   - E.g., `auto`, `svd`, `cholesky`, `saga` in scikit-learn. 
   - **Behavior**: Determines the algorithm used for optimization. Some solvers work better for large datasets or datasets with specific properties (e.g., `saga` works well with Lasso regression and large datasets).
+  
+| Solver        | Type       | Best For                                      | Description                                                                           |
+| ------------- | ---------- | --------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `'auto'`      | Adaptive   | Lets scikit-learn pick the best based on data | Automatically selects between ‘svd’, ‘cholesky’, ‘lsqr’, and ‘sparse_cg’              |
+| `'svd'`       | Exact      | Small/medium dense data                       | Uses Singular Value Decomposition (SVD) — numerically stable for ill-conditioned data |
+| `'cholesky'`  | Exact      | Small dense data                              | Fast but unstable if XᵀX is nearly singular                                           |
+| `'lsqr'`      | Iterative  | Large or sparse data                          | Solves via least squares QR decomposition; memory efficient                           |
+| `'sparse_cg'` | Iterative  | Large sparse matrices                         | Uses Conjugate Gradient method on normal equations                                    |
+| `'sag'`       | Stochastic | Large datasets                                | Stochastic Average Gradient — handles large n_samples efficiently                     |
+| `'saga'`      | Stochastic | Large + sparse + L1 regularization            | Extension of SAG; supports L1 and elasticnet penalties                                |
 
 **Implementation Example (Python with Scikit-learn):**
 ```python
